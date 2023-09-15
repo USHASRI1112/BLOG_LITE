@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Blog Lite</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='myprofile.css') }}" />
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom_validations.js') }}"></script>
+  <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="con">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1877F2;">
+    <a class="navbar-brand">
+      <h2 style="color: white;">Social Lite</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/home" method="GET"><button class="btn float-right btn-success btn-sm btn-block"
+              type="submit">Home</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/addpost" method="GET"><button
+              class="btn float-right btn-secondary btn-sm btn-block" type="submit">Add Post</button></a>
+        </li>
+        <li>
+          <div class="container">
+            <form action="/searchuser" method="POST">
+              <div class="d-flex flex-row">
+                <input class="form-control" id="search-user" name="searchuser" type="search" placeholder="Search User">
+                <button class="btn btn-sm btn-outline-info" type="submit">Search</button>
+              </div>
+            </form>
+
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" method="GET"><button class="btn float-right btn-danger btn-sm btn-block"
+              type="submit">Log Out</button></a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #333333;">
+    <a class="navbar-brand" href="#">
+      <h2 style="color: white;">Blog Lite</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/home" method="GET">
+            <button class="btn btn-success btn-sm" type="button">Home</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/addpost" method="GET">
+            <button class="btn btn-secondary btn-sm" type="button">Add Post</button>
+          </a>
+        </li>
+        <li class="nav-item">
+          <form class="form-inline" action="/searchuser" method="POST">
+            <div class="input-group">
+              <input class="form-control form-control-sm" id="search-user" name="searchuser" type="search"
+                placeholder="Search User">
+              <div class="input-group-append">
+                <button class="btn btn-outline-info btn-sm" type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" method="GET">
+            <button class="btn btn-danger btn-sm" type="button">Log Out</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <div class="container">
+    <h2 class="display-block text-center" style="color: #1877F2;">Welcome <b>{{ Username }}</b></h2>
+    <hr class="rounded">
+  </div> -->
+  <div class="container">
+    <div class="profile-con">
+      <div class="col-6 profile">
+        <img class="fixedimage" src="/static/uploads/{{ user.profile_photo }}" style="width: 100;" />
+        <h2 class="Username">{{ Username }}</h2>
+      </div>
+      <div class="col-6 total-blog">
+        <h2 class="posts">Posts: <span>{{ bloglist|length }}</span></h2>
+        <div class="follow-blog">
+          <div class="follow">
+            <h2 class="follow-text"><a href="/listoffollowed"><button class="btn">Following</button></a></h2>
+            <h2>{{ followed }}</h2>
+          </div>
+          <div class="follow">
+            <h2 class="follow-text"><a href="/listoffollowedby"><button class="btn">Followers</button></a> </h2>
+            <h2>{{ followedby }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr />
+    <h1 class="MyPost">My Posts</h1>
+  </div>
+  <div class="container">
+    <div class="row g-2">
+      {% if bloglist|length > 0 %}
+      {% for item in bloglist %}
+      <div class="col-4">
+        <div class="p-3 myposts">
+          <div>
+            <img class="postimage" src="/static/uploads/{{ item.image_url }}" style="width: 100;" />
+            <div class="col">
+              <h4>{{ item.title }}</h4>
+            </div>
+            <div class="col">
+              <p>{{ item.caption_description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div class="notfound-con">
+        <p><img class="notfound-image" src="/static/not_found.jpg" style="width: 100;" /></p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-center">
+    <div class="d-flex flex-column">
+      <div class="back text-center ">
+        <i class="far fa-copyright icon mt-2 " style="font-size: 20px;
+        "></i>
+        <span class="para ml-2 mt-2"> 2023 by TEAM US</span>
+      </div>
+      <div class="bottom d-flex flex-row">
+        <div class="icons-container m-3">
+          <a href="https://www.rgukt.ac.in/" target="_blank"><i class="fab fa-google icon"></i></a>
+        </div>
+        <div class="icons-container m-3">
+          <a href="https://www.instagram.com/beautyofrgukt/?hl=en" target="_blank"><i
+              class="fab fa-instagram icon"></i></a>
+        </div>
+        <div class="icons-container m-3">
+          <a href="https://twitter.com/RGUKT_Basara" target="_blank"><i class="fab fa-twitter icon"></i></a>
+        </div>
+        <div class="icons-container m-3">
+          <a href="https://in.linkedin.com/school/rguktbasar/" target="_blank"><i class="fab fa-linkedin icon"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</body>
+
+</html>

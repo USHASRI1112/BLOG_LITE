@@ -1,0 +1,104 @@
+.fixedimage {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Username {
+    color: aliceblue;
+    font-family: " Bricolage Grotesque";
+}
+
+
+.follow-blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.follow-text {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.posts {
+    font-weight: 600;
+}
+
+.notfound-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound-img {
+    border: none;
+}
+
+.myposts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+
+
+}
+
+.postimage {
+    border-radius: 10px;
+    height: 200px;
+    box-shadow: rgba(10, 10, 10, 0.24) 0px 5px 10px;
+    weight: 200px;
+
+}
+
+.btn {
+    background-color: rgb(6, 138, 172);
+    padding: 10px;
+    color: aliceblue
+}
+
+.profile-con {
+    background-image: linear-gradient(#09203F, #537895);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+    margin: 10px
+}
+
+/* .con {
+    background-image: linear-gradient(to left, #EE9CA7, #FFDDE1);
+} */
+.MyPost {
+    font-family: " Bricolage Grotesque";
+}

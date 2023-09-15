@@ -1,0 +1,17 @@
+.fixed-image {
+  border: 1px solid black;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+.table {
+  margin: auto;
+  width: 50% !important;
+}

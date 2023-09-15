@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Blog Lite</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='signup.css') }}" />
+  <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom_validations.js') }}"></script>
+</head>
+
+<body>
+  <section style="background-color:#f0f2f5">
+    <div class="bg">
+      <div>
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="Card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="signup">Signup</h2>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul class=flashes>
+                  {% for message in messages %}
+                  <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+                {% block body %}
+                {% endblock %}
+                <form action="/signup" method="POST" enctype="multipart/form-data" id="login-form">
+
+                  <div class="input-Con">
+                    <label class="label" for="form3Example1cg">Username</label><br />
+                    <input type="text" id="form3Example1cg" name="username" class="input-el" required
+                      placeholder="Username" />
+                  </div>
+
+                  <div class="input-Con">
+                    <label class="label" for="password">Password</label><br />
+                    <input type="password" id="password" name="password" placeholder="Password" class="input-el"
+                      required />
+                  </div>
+
+                  <div class="input-Con">
+                    <label class="label" for="confirm_password">Confirm password</label><br />
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"
+                      class="input-el" />
+                  </div>
+
+                  <div class="input-Con ">
+                    <label class="label" for="profile-photo">Upload profile photo</label><br />
+                    <input type="file" class="input-el  choose-file" name="file" id="profile-photo" required />
+                  </div>
+
+                  <div class="btn-Con">
+                    <button type="submit" class="signup-btn">Signup</button>
+                  </div>
+
+                  <p class="text-center text-muted mt-4 mb-0">Have already an account? <a href="/"
+                      class="fw-bold text-body"><u>Login here</u></a></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center  footer">
+      <div class="d-flex flex-column">
+        <div class="back text-center ">
+          <i class="far fa-copyright icon mt-2 " style="font-size: 20px;
+                "></i>
+          <span class="para ml-2 mt-2"> 2023 by TEAM US</span>
+        </div>
+        <div class="bottom d-flex flex-row">
+          <div class="icons-container m-3">
+            <a href="https://www.rgukt.ac.in/" target="_blank"><i class="fab fa-google icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://www.instagram.com/beautyofrgukt/?hl=en" target="_blank"><i
+                class="fab fa-instagram icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://twitter.com/RGUKT_Basara" target="_blank"><i class="fab fa-twitter icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://in.linkedin.com/school/rguktbasar/" target="_blank"><i
+                class="fab fa-linkedin icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

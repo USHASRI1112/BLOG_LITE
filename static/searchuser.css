@@ -1,0 +1,13 @@
+.no_user {
+    font-size: 30px;
+}
+
+.no-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    padding: 10px;
+}

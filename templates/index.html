@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Blog Lite</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom_validations.js') }}"></script>
+</head>
+
+<body>
+  <section class="" style="  background-image: linear-gradient(to left,#09203F, #537895); ">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div style="color: #e3ecf7; text-align:center">
+            <h1><b>RGUKT BLOG LITE</b></h1>
+          </div>
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-5">Sign in</h3>
+              <form action="/login" method="POST" id="login-form">
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="display: block; text-align: left;"
+                    for="typeUsernameX-2">Username</label>
+                  <input type="text" name="username" id="typeUsernameX-2" class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" style="display: block; text-align: left;"
+                    for="typePasswordX-2">Password</label>
+                  <input type="password" name="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+              </form>
+              <br />
+              <p class="mb-0">Don't have an account?</p><br>
+              <a href="/signup" method="GET"><button class="btn btn-secondary btn-lg btn-block"
+                  type="submit">Signup</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="d-flex flex-column">
+        <div class="back text-center ">
+          <i class="far fa-copyright icon mt-2 " style="font-size: 20px;
+                "></i>
+          <span class="para ml-2 mt-2"> 2023 by TEAM US</span>
+        </div>
+        <div class="bottom d-flex flex-row">
+          <div class="icons-container m-3">
+            <a href="https://www.rgukt.ac.in/" target="_blank"><i class="fab fa-google icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://www.instagram.com/beautyofrgukt/?hl=en" target="_blank"><i
+                class="fab fa-instagram icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://twitter.com/RGUKT_Basara" target="_blank"><i class="fab fa-twitter icon"></i></a>
+          </div>
+          <div class="icons-container m-3">
+            <a href="https://in.linkedin.com/school/rguktbasar/" target="_blank"><i
+                class="fab fa-linkedin icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

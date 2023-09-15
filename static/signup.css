@@ -1,0 +1,208 @@
+/* .bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.Card {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+}
+
+.input-style {
+    height: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #f0f2f5;
+}
+
+.signup {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.input-el {
+    height: 30px;
+    border-radius: 7px;
+    border-color: #f0f2f5;
+    font-size: 13px;
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0px 0px 0px;
+
+}
+
+.label {
+    font-size: 15px;
+}
+
+.input-Con {
+    padding: 5px;
+}
+
+.signup-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #0b69ff;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    margin: 5px;
+    margin-top: 10px;
+    ;
+
+}
+
+.btn-Con {
+    display: flex;
+}
+
+
+
+.label {
+    margin-bottom: 0px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
+    color: #475569;
+}
+
+.input-el {
+    font-size: 14px;
+    height: 35px;
+    border: 1px solid #d7dfe9;
+    background-color: #e2e8f0;
+    color: #64748b;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 8px 16px 8px 16px;
+    outline: none;
+    width: 300px;
+}
+
+.choose-file {
+    padding-bottom: 10px;
+    height: 40px;
+} */
+
+
+.bg {
+    display: flex;
+
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/static/singnup-bg.jpg");
+    background-size: cover;
+    padding: 30px;
+
+}
+
+.Card {
+    width: 400px;
+    height: 550px;
+    background-color: white;
+    margin-right: 170px
+}
+
+.input-style {
+    height: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #f0f2f5;
+}
+
+.signup {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.input-el {
+    height: 30px;
+    border-radius: 7px;
+    border-color: #f0f2f5;
+    font-size: 13px;
+    width: 200px;
+    padding: 10px;
+    margin: 5px 0px 0px 0px;
+
+}
+
+.label {
+    font-size: 15px;
+}
+
+.input-Con {
+    padding: 5px;
+}
+
+.signup-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #0b69ff;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    margin: 5px;
+    margin-top: 10px;
+    ;
+
+}
+
+.btn-Con {
+    display: flex;
+}
+
+
+
+.label {
+    margin-bottom: 0px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
+    color: #475569;
+}
+
+.input-el {
+    font-size: 14px;
+    height: 35px;
+    border: 1px solid #d7dfe9;
+    background-color: #e2e8f0;
+    color: #64748b;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 8px 16px 8px 16px;
+    outline: none;
+    width: 300px;
+}
+
+.choose-file {
+    padding-bottom: 10px;
+    height: 40px;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-body {
+    margin-top: 0px;
+}
+
+.footer {
+    background: white;
+}
